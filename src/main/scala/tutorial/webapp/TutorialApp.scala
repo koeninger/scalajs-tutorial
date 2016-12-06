@@ -12,8 +12,8 @@ import tutorial.facade._
 
 object TutorialApp extends JSApp {
   def main(): Unit = {
-    jQuery(document).ready {
+    jQuery(document).ready(() => {
       jQuery("#example").DataTable()
-    }
+    })
   }
 }

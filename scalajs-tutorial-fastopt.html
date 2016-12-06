@@ -5,6 +5,15 @@
     <title>The Scala.js Tutorial</title>
   </head>
   <body>
+    <!-- Include JavaScript dependencies -->
+    <script type="text/javascript" src="./target/scala-2.12/scala-js-tutorial-jsdeps.js"></script>
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./target/scala-2.12/scala-js-tutorial-fastopt.js"></script>
+    <!-- Run tutorial.webapp.TutorialApp -->
+    <script type="text/javascript">
+      tutorial.webapp.TutorialApp().main();
+    </script>
+    
     <table id="example" class="display dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
       <thead>
         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 137px;">Name</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 214px;">Position</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 103px;">Office</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 41px;">Age</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 92px;">Start date</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 80px;">Salary</th></tr>
@@ -86,13 +95,5 @@
       </tr></tbody>
     </table>
 
-    <!-- Include JavaScript dependencies -->
-    <script type="text/javascript" src="./target/scala-2.12/scala-js-tutorial-jsdeps.js"></script>
-    <!-- Include Scala.js compiled code -->
-    <script type="text/javascript" src="./target/scala-2.12/scala-js-tutorial-fastopt.js"></script>
-    <!-- Run tutorial.webapp.TutorialApp -->
-    <script type="text/javascript">
-      tutorial.webapp.TutorialApp().main();
-    </script>
   </body>
 </html>
