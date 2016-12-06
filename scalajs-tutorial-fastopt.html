@@ -5,6 +5,10 @@
     <title>The Scala.js Tutorial</title>
   </head>
   <body>
+    <script type="text/javascript">
+      document.someJsFun = function() { console.log("some function from JS"); }
+      var someJsGlobal = "some global from JS";
+    </script>
     <button id="click-me-button" type="button"
             onclick="tutorial.webapp.TutorialApp().addClickedMessage()">
             Click me!</button>
@@ -15,5 +19,8 @@
     <script type="text/javascript">
       tutorial.webapp.TutorialApp().main();
     </script>
+    <script type="text/javascript">
+      console.log(someScalaGlobal);
+    </script>    
   </body>
 </html>
