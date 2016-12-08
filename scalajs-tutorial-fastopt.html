@@ -5,12 +5,26 @@
     <title>The Scala.js Tutorial</title>
   </head>
   <body>
-    <button id="click-me-button" type="button">Click me!</button>
-
     <!-- Include JavaScript dependencies -->
     <script type="text/javascript" src="./target/scala-2.12/scala-js-tutorial-jsdeps.js"></script>
     <!-- Include Scala.js compiled code -->
     <script type="text/javascript" src="./target/scala-2.12/scala-js-tutorial-fastopt.js"></script>
+
+    <ol>
+      <li>Some</li>
+      <li>List</li>
+      <li>Elements</li>
+    </ol>
+    <button id="click-me-scala" type="button">munge stuff from scala</button>
+    <button id="click-me-js" type="button">munge stuff from js</button>
+    <script type="text/javascript">
+      jQuery("#click-me-js").click(function() {
+        jQuery("ol > li").each(function() {
+          console.log("JS 'this' is " + this);
+          jQuery(this).text(jQuery(this).text() + " - JS");
+        });
+      });
+    </script>
     <!-- Run tutorial.webapp.TutorialApp -->
     <script type="text/javascript">
       tutorial.webapp.TutorialApp().main();

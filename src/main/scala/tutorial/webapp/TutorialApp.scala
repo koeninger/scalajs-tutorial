@@ -1,20 +1,18 @@
 package tutorial.webapp
 
-import scala.scalajs.js.JSApp
-
+import scala.scalajs.js.{ JSApp, ThisFunction0 }
+import org.scalajs.dom
 import org.scalajs.jquery.jQuery
 
 object TutorialApp extends JSApp {
   def main(): Unit = {
-    jQuery(setupUI _)
+    jQuery("#click-me-scala").click(munge _)
   }
 
-  def setupUI(): Unit = {
-    jQuery("body").append("<p>Hello World</p>")
-    jQuery("#click-me-button").click(addClickedMessage _)
-  }
-
-  def addClickedMessage(): Unit = {
-    jQuery("body").append("<p>You clicked the button!</p>")
+  def munge(): Unit = {
+    jQuery("ol > li").each({ (li: dom.Element) =>
+      println("Scala 'this' is " + this)
+      jQuery(li).text(jQuery(li).text + " - Scala")
+    }: ThisFunction0[dom.Element, _])
   }
 }
